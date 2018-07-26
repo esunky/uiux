@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!--인코딩 방식 지정
+    이 구문을 반드시 지정해야 
+    영어권 이외의 문자가
+    정상적으로 표현 가능-->
+    <title>Box Model과 관련된 CSS 속성</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    
+      <style>
+          h1{
+              display:block;
+              display:inline;/* block : 벽돌처럼 쌓여서 화면에 표시됨 
+                              -> 컨텐츠양과 관계없이 한 줄 전체를 전부 차지 */
+              border: 1px solid red} 
+          
+          /*
+           + : 인적형제(동기) 연산자
+           h1과 형제이면서, h1 바로 다음에 나오는 div태그 = h1+div
+          
+          */
+          h1+div>p{display:blcok; display:inline;
+              border:1px solid blue;}
+          
+        
+          /*
+           ~ : 인접형제(동기) 연산자
+            div와 형제이면서 div이후에 나오는 모든 p태그 = div~p
+          */
+          
+          div~p{border:1px solid pink;}
+          
+          span{
+              display : inline; display:block; /* 화면에 쓰지 않아도 생략되어 있는 기본 속성
+                                   즉, display = 화면에 표시하는 방식
+                          inline : 옆으로 나란히 놓여진 방식 -> width값이 컨텐츠 양만큼 */
+              border:1px solid blue;}
+                  
+           hr{height:10px;border:1px solid red;}
+          
+    </style>
+    
+</head>
+
+<body>
+
+<div id="wrap">
+   
+    <h1>웹 브라우저는 모든 HTML요소(태그)를 하나의 상자형태로 표현</h1>
+    
+    <div>
+    
+    <p>첫번째 문단</p>
+    <p>두번째 문단</p>
+    <p>세번째 문단</p>
+    
+    </div>
+    
+    
+    <p>네번째문단</p>
+    <p>다섯번째 문단</p>
+    
+    
+    <hr>
+    
+    <span>나는               스팬1</span>
+    <span>나는            스팬2</span>
+    <span>나는         스팬3</span>
+    
+   
+</div>
+
+</body>
+
+</html>

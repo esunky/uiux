@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!--인코딩 방식 지정
+    이 구문을 반드시 지정해야 
+    영어권 이외의 문자가
+    정상적으로 표현 가능-->
+    
+    <title>ul을 활용한 메뉴구조</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    
+    
+     <style>
+         
+          .clearfix{clear:both;} 
+         
+         .menu>ul{
+             margin:0 auto;
+             width:638px; height:50px;
+             background-color:yellow;
+         }
+         
+          .menu>ul>li{
+             display:inline-block;
+             float:left;
+             width:150px; height:50px;
+
+/*             margin-right: 10px;*/
+             margin-bottom: 10px;
+             line-height:50px;
+             text-align: center;
+             border:1px solid black;
+         }
+         .menu>ul>li:first-child{
+             margin-right: 10px;
+         }
+         
+         .menu>ul>li:nth-child(2){
+             margin-right: 10px;
+         }
+         .menu>ul>li:nth-child(4){
+             margin-left:10px;
+         }
+         
+            p{
+             display:
+             clear:both;
+             width:638px; 
+             height:300px;
+             margin:0 auto;
+             line-height: 300px;
+             text-align:center;
+             border:1px solid black;
+         }
+/*
+         .menu>p:after{
+             display:block;
+             clear:both;
+             content:"";
+         }
+*/
+        
+         
+         
+    </style>
+</head>
+
+
+<body>
+   <div id="wrap">
+       <h1 style="text-align: center;">웹 표준 퍼블리싱 강좌</h1>
+       <div class="menu">
+           <ul style=list-style:none;>
+               <li>보충특강</li>
+               <li>문제풀이</li>
+               <li>자료실</li>
+               <li>작업환경</li>
+           </ul>
+        </div>
+           <div class="clearfix"></div>
+           <p>메뉴 선택에 따른 내용 출력란</p>
+        
+      
+   </div>
+   
+   
+</body>
+
+
+
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!--인코딩 방식 지정
+    이 구문을 반드시 지정해야 
+    영어권 이외의 문자가
+    정상적으로 표현 가능-->
+    <title>프로젝트 기획</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+     <style>
+         /*태그 == 요소 == 선택자 == 엘리먼트*/
+         
+         /* .work 클래스를 가진 div 태그*/
+         div.work{background-color: yellow}
+         div.cont{background-color: darksalmon;
+                  border:3px solid black;
+             
+                  border-width:10px;/*중복된 부분은 재정의 됨*/
+                  border-style:dotted;
+                  border-color:yellow}
+                     
+         /*border:선굵기,선스타일,선색상;*/
+         
+         
+         
+         /*'>'(꺽쇠)는 직계자식을 의미*/
+         div.cont>h3{color: cornflowerblue}
+         
+         
+         
+         /*class의 활용 -> 같은 css효과를 여러가지 다른 요소에 
+                          공통으로 적용하고 싶을 때 사용하기도 합니다*/
+         
+         /*@.idea의 의미(해석) -> idea클래스가 붙어있는 모든 선택자
+                                여기서 @는 모든 태그를 의미한다.*/
+         
+         /*클래스를 먼저 정의하고 아래 소스코드에 붙여넣는 방식으로 작업할 수도 있다 - myborder처럼*/
+         
+         .myborder{border: 3px solid red;}
+         
+         .idea{background-color: coral;}
+         .brain{background-color: cadetblue}
+         img{width: 550px; height: auto;}
+         
+         
+    </style>
+</head>
+<body>
+    <div class="wrap">>
+        <h1>프로젝트 기획</h1>
+        
+        <div class="work">
+             <h2>기획안 작업</h2>
+             <h3 class="apple">1.기획은 웹 콘텐츠의 설계도</h3>
+             <h4> 1) 목표를 설정</h4>
+             <h4> 2) 목표를 성취하기 위한 필수단계</h4>
+                
+             <h3 class="eve">2.기획자의 뚜렷한 주관과 독창성이 담긴 결과물</h3>
+             <h4> 1) 아이디어는 번뜩이는 섬광</h4>
+             <h4> 2) 평소에 꾸준히 관심을 기울여야 한다(기록)</h4>
+        </div>
+        
+        <div class="cont">
+        <h2>기획안 내용 작성</h2>
+        <h3>1. 기획안 나쁜 예</h3>
+        <h4>- 자료만 복붙한 설득력과 성의 없는 내용</h4>
+        <h4>- 제작목적이 불분명함.</h4>
+        <h4>- 내용에 대한 전달력과 설득력이 부족</h4>
+        <h4>- 제작목적이 불분명함.</h4>
+        
+        <h3>2. 기획안 좋은 예</h3>
+        <h4>- 제작해야 할 타당성을 갖춤(왜 써야하는 가?)</h4>
+        <h4>- 적합한 내용으로 일목요연한 구성 및 전달</h4>
+    
+        </div>
+        
+        <br>
+        <div class="idea myborder">
+              <h2>아이디어 도출</h2>
+              <h3>아이디어 발상과정</h3>
+              <h4>- 아이디어는 자신이 가진 지식과 경험의 범위 내에서만 떠오른다.</h4>
+              <h4>- 아이디어를 생각해내는 방법에는 정답이 없다.</h4>
+              
+              <h3>좌뇌형/우뇌형 인간의 특징</h3>
+              <h4>- 누구나 꾸준한 훈련을 통해 양쪽 뇌의 기능을 고르게 활용할 수 있다.</h4>
+        
+        </div>
+        
+        <div class="idea brain">
+          
+              <h2>아이디어 발상</h2>
+              <h3>마인드 매핑</h3>
+              <h4>- 핵심 문제와 관련된 여러 요인들을 발견하고, 그 안에서 아이디어와 단서를 찾고자 한다</h4>
+              <p><img src="images/MindMapping.png" alt="mind mapping"></p>
+              
+              <h3>브레인 스토밍</h3>
+              <h4>- 문제,해결방안에 대해 최대한 많은 의견을 공유하고자 하는 회의,교육도구</h4>
+              <p><img src="images/brainstorming.jpg" alt="brainstorming"></p>
+          
+          </div>
+        
+        
+      
+        
+    </div>
+</body>
+</html>

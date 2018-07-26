@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!--인코딩 방식 지정
+    이 구문을 반드시 지정해야 
+    영어권 이외의 문자가
+    정상적으로 표현 가능-->
+    
+    <title>가장중요</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    
+     <style>
+         {*margin:0; padding:0;}
+         #wrap{width:960px; margin:0 auto;}
+         
+         header>div{
+             width:960px;
+             height:100px;
+             margin-bottom:10px;
+             background-color:gray;
+             border:1px solid gray;
+             box-sizing: border-box;
+             border-radius:10px;
+         }
+         
+/*
+         section{*zoom:1;}
+         section:after{clear:both display:block;content:"";}
+*/
+         
+         section>.cont{
+/*             display:inline-block*/
+             float:right;
+             width:750px;
+             height:400px;
+             margin-left:10px;
+             background-color:yellow;
+             border:1px solid yellow;
+             box-sizing: border-box;
+             border-radius:10px;
+         }
+         
+         section>.lnb{
+/*             float:left;*/
+             width:200px;
+             height:250px;
+             margin-bottom:10px;
+             background-color:blue;
+             border:1px solid blue;
+             box-sizing: border-box;
+             border-radius:10px;
+         }
+         
+         section>.snb{
+/*             float:left;*/
+             width:200px;
+             height:140px;
+             background-color:pink;
+             border:1px solid pink;
+             box-sizing: border-box;
+             border-radius:10px;
+         }
+         
+         footer>div{
+             
+             width:960px;
+             height:100px;
+             margin-top:10px;
+             background-color:darkred;
+             border:1px solid darkred;
+             box-sizing: border-box;
+             border-radius:10px;
+         }
+         
+    </style>
+    
+</head>
+
+<body>
+  <div id="wrap">
+      <header><div>    </div></header>
+      <section class="sect">
+         <article class="cont"></article>
+          <article class="lnb"></article>
+          <article class="snb"></article>
+      </section>
+      <footer><div></div></footer>
+  </div>
+   
+   
+   
+</body>
+
+
+
+
+</html>

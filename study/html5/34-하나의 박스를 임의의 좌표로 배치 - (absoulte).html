@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!--인코딩 방식 지정
+    이 구문을 반드시 지정해야 
+    영어권 이외의 문자가
+    정상적으로 표현 가능-->
+    
+    <title>하나의 박스를 임의의 좌표로 배치</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">  <!--    ./는 언제나 생략-->
+    
+     <style>
+         .box{
+             position:absolute;
+             left:100px;
+             top:100px;
+             width:100px;
+             height:100px;
+             background-color:red;
+             border:1px solid black;
+         }
+         .box1{
+             position:absolute;
+             left:-50px;
+             top:-80px;
+             width:100px;
+             height:100px;
+             background-color:red;
+             border:1px solid black;
+         }
+/*         position:absolute -> 기준점을 설정하지 않으면 body가 기준점이 된다.*/
+         
+         
+    </style>
+    
+</head>
+
+
+
+<body>
+   <p class="box"></p>
+   <p class="box1"></p>
+   
+    
+   
+   
+</body>
+
+
+
+
+</html>

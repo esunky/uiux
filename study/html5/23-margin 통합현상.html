@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!--인코딩 방식 지정
+    이 구문을 반드시 지정해야 
+    영어권 이외의 문자가
+    정상적으로 표현 가능-->
+    
+    <title>Margin 통합현상</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">  <!--    ./는 언제나 생략-->
+    
+     <style>
+        
+         .case_1>h3{
+             margin-bottom: 100px; padding:40px;
+         } 
+        .case_1>p{
+             margin:0 auto;
+             width:150px; 
+             height:150px;
+             line-height:150px;
+             text-align:center;
+             border:1px solid black;
+         }
+         p.box1{
+             background-color:red;
+         }
+         p.box2{
+             margin-bottom:50px;
+             background-color:orange;
+         }
+         p.box3{
+             margin-top:75px;
+             margin-bottom:60px;
+             background-color:yellow;
+         }
+         p.box4{
+             margin-top:50px;
+             margin-bottom:40px;
+             background-color:green;
+         }
+         p.box5{
+             margin-top:70px;
+             background-color:blue;
+         }
+         
+         
+         
+    </style>
+    
+</head>
+<body>
+   
+    <div id="wrap">
+        <h1 class="text-center">통합현상</h1>
+        <section>
+            <article class="case_1">
+            <h2 class="text-center">형제관계의 마진통합 테스트</h2>
+            
+            <h3>margin에만 있는 마진통합현상은 형제관계에서 <mark>상하마진을 중복했을 때</mark> 발생하며,
+               두 수치중 큰 값만 살아남는다.</h3>
+            
+            <p class="box1">박스1</p>
+            <p class="box2">박스2</p>
+            <p class="box3">박스3</p>
+            <p class="box4">박스4</p>
+            <p class="box5">박스5</p>
+ 
+        
+           
+    
+        </article>     
+        </section>
+        
+       
+    </div>
+   
+   
+</body>
+
+
+
+
+</html>

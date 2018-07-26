@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!--인코딩 방식 지정
+    이 구문을 반드시 지정해야 
+    영어권 이외의 문자가
+    정상적으로 표현 가능-->
+    
+    <title>부모의 기준으로 박스위치지정</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">  <!--    ./는 언제나 생략-->
+    
+     <style>
+         .parent{
+/*             pos:r의 주 용도 
+               1) 해당요소의 이동이 주 목적이 아니다!
+               2) absoulute할 요소의 기준점으로 설정하는 것이 주 용도이다. 
+               3) 따라서, body가 아닌 새로운 기준점을 기준으로 이동하게 된다.*/
+             position:relative;
+             width:400px;
+             height:400px;
+             margin:100px 0 0 100px;
+             background-color:yellow;
+         }
+         .parent>.child{
+             position:absolute;
+             left:100px;
+             top:100px;
+             width:100px;
+             height:100px;
+             background-color:red;
+         }
+         
+    </style>
+    
+</head>
+
+
+
+<body>
+   
+    
+   
+   
+</body>
+     <div class="parent">
+     <p class="child"></p>
+     </div>
+
+
+
+</html>

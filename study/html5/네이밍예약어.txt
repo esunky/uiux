@@ -1,0 +1,106 @@
+자주쓰는 네이밍 예약어
+
+네비게이션   nav
+메뉴        mnu
+탭메뉴      tab
+제목        tit,h
+텍스트      tx
+인덱스      idx
+
+그룹핑(영역) group,area
+
+업데이트     up
+업로드       upld
+다운로드     dnld
+
+켜짐        on 
+꺼짐        off
+
+등록        reg
+답변        repl
+
+수정        edt
+삭제        del
+
+검색        srch
+찾기        fnd
+더보기      more
+목록        list
+페이징      paging
+페이지네이션 pagination
+지시자      indicator 
+
+베스트      best
+신규        new
+
+읽기        read
+쓰기         wrt
+
+열기         opn
+닫기        clse
+
+숨김      blind, hide
+잠금         lc
+허용        pmit
+화살표       arr
+
+이전        prev
+다음        next
+
+오버        over
+상단         top
+하단         btm
+
+위           up
+아래         dn
+
+전송        smit
+버튼         btn
+
+가기         go
+라디오버튼  input_rdo
+체크박스    input_chk
+텍스트필드  input_txt
+
+확인         cfm
+완료         ok
+취소        cncl
+
+확대         zin
+축소        zout
+
+
+
+
+
+
+임시 temp,tmp
+접기 fd
+펴기 unfd
+한국어 ko,kr
+영어 eng,en
+일어 jp
+중국어 cn
+
+단(섹션)영역 sect
+외톨이영역 aside
+메인메뉴 gnb (global)
+서브메뉴 lnb (local)
+별똥메뉴 
+snb (spot)
+tnb (top)  
+fnb (footer)
+
+
+
+
+
+
+
+
+
+
+
+
+
+

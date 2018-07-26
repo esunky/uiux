@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!--인코딩 방식 지정
+    이 구문을 반드시 지정해야 
+    영어권 이외의 문자가
+    정상적으로 표현 가능-->
+    <title>블럭요소와 인라인요소</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    
+     <style>
+         
+         *{margin:0;padding;0}
+         
+         h1,span{width:400px; height:200px; border:1px solid blue;background-color:yellow}
+         /*a,(콤마)b는 그룹선택지*/
+         
+         p{ width:200px; background-color:red;}
+         /*블럭요소의 지배영역은 width가 줄어드는 것과 상관이 없다.부모의 100%
+           지배영역이 100% 한 줄이기 때문에 자동줄바꿈이 이루어지는 것!*/
+         
+         div{width:80px;height: 20px; color:blue; background: orange;}
+         /*height길이를 정하면 overflow가 생길 수 있다*/
+         
+         div~span{background:green; border:1px solid red}
+         
+         hr~p{display:block;
+              display:inline-block; /*인라인에서 블럭으로*/
+              height:100px; line-height:100px; text-align:center;}
+         
+         p.box1{ 
+               background-color:red;}
+         
+         p.box2{
+            background-color:blue}
+         /*다른 내용만 쓰고 같은 부분은 위 hr~p에 묶어놓았다*/
+         
+    </style>
+    
+</head>
+
+<body>
+
+<h1>나는 블럭요소 h1</h1>
+<span>나는 인라인요소 span</span>
+<p>나는 블럭요소 p</p>
+<div>나는 블럭요소 div</div>
+
+<span>나는 인라인요소 span-1</span>
+<span>나는 인라인요소 span-2</span>
+<span>나는 인라인요소 span-3</span>
+<span>나는 인라인요소 span-4</span>
+<span>나는 인라인요소 span-5</span>
+
+<hr>
+
+<p class="box1">박스1</p> <!-- </p>를 지우면 줄바꿀 때 생기는 한 칸 공백이 없어진다.-->
+<p class="box2">박스2</p>
+
+<h2>
+    요소간의 줄바꿈은 한 칸 공백으로 인식한다.
+</h2>
+
+
+
+
+
+<!-- 
+    1. HTML의 모든 태그는 blcok 아니면 inline이다.
+    
+    2. block요소의 특징 -> {display:block;} 
+        ->> 지배영역이 콘텐츠 양에 관계없이 한 줄 전체!
+            따라서 자동 줄바꿈처리가 된다.
+            기본적으로 width값은 부모크기와 100%일치한다.
+            
+    3. inline 요소의 특징은 {display:inline;}
+        ->> 지배영역이 콘텐츠 양만큼!
+            따라서 인라인요소 2개를 연속해서 사용할 경우 나란히 옆에 나열된다.
+            width, height가 적용되지 않는다 (가로로 나열되는 거니까!)
+    
+    4. {display:inline-block;}
+       ->> inline과 block의 특징을 반반씩 담는다 (아수라백작)
+           자동줄바꿈X 인라인처럼 옆으로 나열된다.
+           그렇지만 width와 height가 적용된다
+    
+    
+    
+
+-->
+
+
+
+
+
+</body>
+
+</html>

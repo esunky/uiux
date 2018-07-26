@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!--인코딩 방식 지정
+    이 구문을 반드시 지정해야 
+    영어권 이외의 문자가
+    정상적으로 표현 가능-->
+    
+    <title>내용과 테두리사이의 공간 padding</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">  <!--    ./는 언제나 생략-->
+    
+     <style>
+/*         기본설정*/
+         a:link{font-weight:800;}
+/*         href 값이 설정되어 있는 경우*/
+         a:visited{color:green !important;}
+/*         visited 한 번이라도 방문했느냐에 따라 적용됨*/
+         a:hover{
+             background-color:chartreuse !important;} 
+        /* hover=마우스포인터가 앵커영역안으로 진입(enter)한다.*/ 
+         a:active{color:red !important;}
+/*         진입후, 마우스왼쪽버튼을 누르고 있는 상태
+           active도 가상선택자임*/
+         
+         
+         
+         #wrap{
+             width:800px;
+             margin:0 auto;
+/*             border:1px solid black;*/}
+         
+         section>h2{margin-bottom:30px;}
+/*         여러 article 중에서 첫번쨰 article의 h3를 선택하고 싶을 때
+           1.class를 붙인다(frst)
+           */
+         section>article.frst>h3{
+             height:200px;
+             margin-bottom:100px;
+             padding-top:50px;
+             border:1px solid red;}         
+         
+/*         ********************************************/
+         section>article.sec{margin-bottom:100px;}
+         section>article.sec>p{margin-top:20px;}
+         
+         section>article.sec>p>a{
+/*            inline요소는 위,아래 margin이 정상적으로 적용되지 않기 때문에 
+              반드시 블럭의 속성을 적용해야한다.(padding역시 상하는 블럭속성적용해야함)*/
+            display:inline-block;
+            padding-top:20px;
+            padding-right:30px;
+            padding-bottom:20px;
+            padding-left:30px;
+            
+            color: white;
+            background-color:#0977bc;
+        
+            outline:1px solid green;
+/*         박스사이즈에 영향을 미치지 않은 outline*/
+             
+              
+              }
+         
+/*         여러 article 중에서 N번쨰를 선택하고 싶을 때
+            :first-child, :last-child -> 가상선택자 :표기로 선택을 도와준다.
+         
+         만약 중간에 있는 것들을 선택하고 싶다면?*/
+         section>article.sec>p>a:first-child{
+             background-color:#25aae1;
+         }
+          
+         section>article.sec>p>a:nth-child(2){
+             background-color:blueviolet;
+         }
+         
+         section>article.sec>p>a:nth-child(3){
+             background-color:brown;
+         }   
+         
+         section>article.sec>p>a:nth-child(4){
+             background-color:tomato;
+         }
+         
+         section>article.sec>p>a:last-child{
+             background-color:red;
+         }
+/*         태생자체가 부모자식의 family 구조로 이루어진 태그들은 :first-child같은 가상선택자가
+           100% 정상적으로 작동한다. 그러나 코딩중 만들어진 인위적인 부모자식 관계에서
+           가상선택지를 사용할 경우 정상적으로 될 때도 있지만 비정상적으로 작동하기도 한다.
+           만약 비정상적으로 작동할 경우 고민하지말고 빨리 다른 방법을 찾는 것이 현명하다.*/
+         
+/*         ********************************************/
+         h4{
+             height: 100px;
+             line-height:100px;
+         }
+         h4>span:before{content:"나이";}
+         h4>span:after{content:"세";}
+         
+        .last>p:before{content:"날씬한 기분의 "}
+        .last>p:after{content:"다이어트 식이섬유"}
+/*         h4+p라고 써도 가능*/
+         
+         
+    </style>
+    
+</head>
+
+
+
+<body>
+   <div id="wrap">
+       <header><h1 class="text-center">박스의 안쪽 여백 padding</h1></header>
+       
+       <section>
+        <h2>내용을 읽기 편하게 하는 역할의 padding</h2>    
+            
+        <article class="frst">
+           <h3>padding을 사용하지 않으면 내용이 경계선에 달라붙는다.</h3>
+        </article>      
+           
+        <hr>
+              
+        <article class="sec">
+           <h3>가상선택자를 이용한 셀렉팅(선택)</h3>
+           <p>
+            <a href="#1">Home</a>      
+            <a href="#2">About me</a>      
+            <a href="#3">Portfolio</a>      
+            <a href="#4">Design</a>      
+            <a href="#5">Epilogue</a>      
+           </p>
+                  
+        </article>
+        
+        <hr>
+        
+        <article class="last">
+            <h3>가상선택자 :before 와 :after</h3>
+            
+            <h4><span>20</span></h4>
+            <p>미에로화이바 </p>
+        </article>       
+                       
+       </section>
+       
+       <footer><address class="text-center">&copy;Designed by 이선경</address></footer>
+       
+       
+       
+       
+   </div>
+    
+   
+   
+</body>
+
+
+
+
+</html>

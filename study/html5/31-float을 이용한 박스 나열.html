@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!--인코딩 방식 지정
+    이 구문을 반드시 지정해야 
+    영어권 이외의 문자가
+    정상적으로 표현 가능-->
+    
+    <title>Float을 이용한 박스 나열</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">  <!--    ./는 언제나 생략-->
+    
+     <style>
+         hr{position:static;left:0;margin:50px 0;}
+    
+         ul.study>li{
+             float:left;
+             width:200px;
+             height:100px;
+             line-height:100px;
+             text-align:center;
+/*             border:1px solid black;*/
+             box-sizing:border-box;
+         }
+         .study>li:first-child{
+             background-color:tan;
+         }
+         .study>li:nth-child(2){
+             background-color:peachpuff;
+         }
+         .study>li:nth-child(3){
+             background-color:lavender;
+         }
+         .study>li:last-child{
+             background-color:lightgoldenrodyellow;
+         }
+         .clearfix{clear:both;} 
+/*        both는 right과 left를 통틀은 단어. 실무에서 쓰인다.*/
+         
+         .subject:after{
+             display:block;
+             clear:both;
+             background-color:palegreen;
+             content:""
+         }
+         
+         .subject>li{
+             float:left;
+             width:200px; 
+             height:100px;
+             line-height:100px;
+             text-align:center;
+             
+         }
+         
+         .subject>li:first-child{
+             background-color:yellow;
+         }
+         .subject>li:nth-child(2){
+             background-color:lightskyblue;
+         } 
+         .subject>li:nth-child(3){
+             background-color:coral;
+         }
+         .subject>li:nth-child(4){
+             background-color:greenyellow;
+         }
+         .test{*zoom:1;}
+         
+         .test:after{
+             display:block;
+             clear:both;
+             content:""
+         }
+         
+         
+         .test>span{
+             display:block;
+             float:left;
+             width:100px;
+             height:100px;
+         }
+         
+         .test>span:first-child{
+             background-color:red;
+         }
+         .test>span:nth-child(2){
+             background-color:blue;
+         }
+         .test>span:nth-child(3){
+             background-color:yellow;
+         }
+         .test>span:nth-child(4){
+             background-color:green;
+         }
+         .test>span:nth-child(5){
+             background-color:pink;
+         }
+         
+         
+         
+         
+         
+         
+         
+         
+    </style>
+    
+</head>
+<body>
+   <div id="wrap">
+       <h1 class="text-center">Float을 이용한 박스 나열 </h1>
+       
+       <ul class="study">
+           <li>HTML5</li>
+           <li>CSS</li>
+           <li>Javascript</li>
+           <li>jQuary</li>
+       </ul>
+       
+       <div class="clearfix"></div>
+<!-- 1)float의 끌어당기는 영향력을 차단시키는 마감제역할
+     2)float의 영향을 차단시키는 마감제 사용은 필수!필수!     -->
+       <p>안녕</p>
+       <hr>
+       
+      <ol class="subject">
+           <li>UX/UI</li>
+           <li>포토샵</li>
+           <li>일러스트</li>
+           <li>포트폴리오</li>
+       </ol>
+       
+<!--       <div class="clearfix"></div>-->
+       
+       <p style="clear:both;">추천과목 </p>
+       <p>인기과목 </p>
+       <hr>
+       
+       
+<!--  문제)
+      가상선택자를 이용하여 float을 완성하시오/박스사이즈 100*100-->
+       
+       <p class="test">
+           <span class="red">red</span>
+           <span class="blue">blue</span>
+           <span class="yellow">yellow</span>
+           <span class="green">green</span>
+           <span class="pink">pink</span>
+       </p>
+       
+       <p>float 테스트</p>
+       
+       
+    
+   </div>
+</body>
+
+
+
+
+</html>

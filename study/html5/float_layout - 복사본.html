@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!--인코딩 방식 지정
+    이 구문을 반드시 지정해야 
+    영어권 이외의 문자가
+    정상적으로 표현 가능-->
+    
+    <title>Float을 이용한 레이아웃</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">  <!--    ./는 언제나 생략-->
+    
+     <style>
+         *{margin:0; padding:0;}
+         
+         #wrap{
+             width:700px;
+             margin:0 auto;
+         }
+         header,.left,.cont,footer{border:1px solid black;} /*그룹선택자*/
+         
+         header{
+             width:698px; 
+             height:148px;
+             margin-top:30px;
+             margin-bottom:10px;
+             line-height:148px;
+             text-align:center;
+         }
+         
+         section{*zoom:1;}
+         section:after{display:block; clear:both; content:"";}
+         
+         section>.left{
+             float:left;
+             width:250px;
+             height:400px;
+             margin-right:10px;
+             line-height:400px;
+             text-align:center;
+         }
+         
+         section>.cont{
+             float:left;
+             width:436px;
+             height:400px;
+             line-height:400px;
+             text-align:center;
+         }
+         
+        
+         footer{
+             width:698px;
+             height:98px;
+             margin-top:10px;
+             line-height:98px;
+             text-align:center;
+         }
+         
+         
+         
+         
+         
+         
+         
+         
+         
+/*
+         header>h1{
+             width:698px;
+             height:150px;
+             margin:30px auto 10px;
+             line-height:150px;
+             text-align:center;
+             border:1px solid black;
+         }
+        address{
+             width:698px;
+             height:100px;
+             margin-top:10px;
+             line-height:100px;
+             text-align:center;
+             border:1px solid black;
+         }
+         
+        
+        
+         
+         section>article{
+             float:left;
+             margin:0 auto;
+         }
+         
+         section>.left{
+             width:248px;
+             height:400px;
+             margin-right:10px;
+             line-height:400px;
+             text-align:center;
+             border:1px solid black;
+         }
+         section>.cont{
+             width:434px;
+             height:400px;
+             line-height:400px;
+             text-align:center;
+             border:1px solid black;
+         }
+*/
+         
+         
+    </style>
+    
+</head>
+
+
+
+<body>
+   <div id="wrap">
+       <header>
+           <h1>메인메뉴 영역</h1>
+       </header>
+       
+       <section>
+           <article class="left">서브메뉴</article>
+           <article class="cont">본문내용</article>
+       </section>
+       
+       <footer><address>Designed by 이선경</address></footer>
+       
+       
+   </div>
+    
+   
+   
+</body>
+
+
+
+
+</html>

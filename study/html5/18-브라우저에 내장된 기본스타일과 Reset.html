@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!--인코딩 방식 지정
+    이 구문을 반드시 지정해야 
+    영어권 이외의 문자가
+    정상적으로 표현 가능-->
+    
+    <title>브라우저에 내장된 기본스타일과 Reset</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    
+     <style>
+/*         margin:바깥쪽여백 padding:안쪽여백*/
+         *{margin:0; padding:0;} /*모든 margin,padding을 0으로 초기화 -> 페이지작업할 때 신경써야할 것중 하나*/
+         body{padding:0;}
+         h1{
+             margin:0;
+             border:1px solid red;}
+         h2{
+             border:1px solid blue;}
+         p{
+             border:1px solid green;}
+         
+    </style>
+</head>
+
+<body>
+   <div id="wrap">
+       <h1>Built-in CSS</h1>
+       <p>
+           어떤 이유로 브라우저가 '퍼블리셔가 작성한 CSS'를 읽지 못한다면 <!--1.처음부터 없거나 2.잘못했거나-->
+           브라우저자체에 내장된 기본스타일로 웹페이지에 적용하여 출력한다.
+       </p>
+       
+       <h2>css reset(태그의 초기화)이 필요한 이유</h2>
+       <p>
+           웹브라우저마다 내장된 기본 스타일이 완전히 똑같지 않아 
+           크로스브라우징(여러가지페이지에서 거의 비슷하게 구현)을 구현하기 어렵기 때문에 자주 사용하는 태그들에 한해
+           기본스타일값을 초기화(0,zero)한다.
+       </p>
+       
+       <h2>약식초기화</h2>
+       <p>
+           CSS 코딩의 들어가면서 페이지에 속하는 모든 요소들의 여백을 초기화 시키는 작업 - <code>*{margin:0; padding:0;}</code>
+       </p>
+       
+   </div>
+   
+   
+</body>
+
+
+
+
+</html>

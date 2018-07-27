@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+#wrap{
+    width:600px; 
+    margin:0 auto;
+    background-color:#333;
+}
+
+header{
+    position:relative;
+    height:100px;
+    background-color:#069;
+}
+
+header>h1{
+    position:absolute;
+    left:30px;
+    top:40px;
+    color:white;
+    font-size:30px;
+    
+}
+
+header>nav{
+    position:absolute; /*자동으로 컨텐츠값만큼 width값이 줄어든다!*/
+    left:240px;
+    top:45px;
+/*    outline:1px solid red;*/
+}
+
+header>nav>.gnb{
+/*    width:260px; li의 값을 합친 값. position을 주지 않을 것이기 때문에 width값을 따로 줘야한다.*/
+
+    *zoom:1;
+}
+
+header>nav>.gnb:after{
+clear:both; display:block; content:"";
+}
+
+header>nav>.gnb>li{
+    width:65px;
+    float:left;
+/*    outline:1px solid red;*/   
+}
+
+header>nav>.gnb>li>a{
+    display:block; /*width값이 100%된다*/
+    height:20px;
+    line-height:20px;
+    color:white;
+}
+
+header>nav>.gnb>li:nth-child(3)>a,
+header>nav>.gnb>li>a:hover{
+    color:#ff0;
+    font-weight:800;
+    text-shadow:1px 1px 1px rgba(255,255,255,0.5);
+}
+
+section{
+    background-color:#fff;
+    width:570px;
+    margin:0 auto;
+    padding:30px 10px 10px 10px;
+}
+section>article>h2{
+    margin-bottom: 30px;
+    color:#000;
+    font-size:25px;
+    font-weight:800;
+    
+}
+
+
+section>article>p{
+    font-size:14px;
+    line-height: 1.5;
+    zoom:1;}
+section>article>p:after{display:block;clear:both;content:"";}
+
+
+section .frame{
+    display:block;
+    overflow:hidden;
+    float:right;
+    width:300px;
+/*    height:auto;*/
+    margin:5px 0 5px 5px;
+    border-radius:5px;
+    box-shadow:1px 1px 1px 1px;
+}
+
+section .frame>img{
+/*    display:block;*/
+    vertical-align: top;
+    width:100%;
+    
+}
+
+
+footer{
+    height:80px;
+    font-size:16px;
+    line-height:80px;
+    text-align: center;
+    
+}
